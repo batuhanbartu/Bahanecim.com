@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fb;
+    color: #2d3748;
+}
+
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Navigasyon */
+.admin-nav {
+    width: 250px;
+    background: #2d3748;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+}
+
+.nav-header h1 {
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #4a5568;
+}
+
+.nav-links {
+    flex: 1;
+    padding: 1rem 0;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: #cbd5e0;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    background: #4a5568;
+    color: white;
+}
+
+.nav-link span {
+    margin-left: 0.5rem;
+}
+
+.nav-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-footer .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: #cbd5e0;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s;
+}
+
+.nav-footer .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Ana içerik */
+.admin-main {
+    flex: 1;
+    padding: 2rem;
+    margin-left: 250px;
+    background: #f8fafc;
+}
+
+.section {
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.section.active {
+    display: block;
+}
+
+.section-header {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.section-header h2 {
+    font-size: 1.8rem;
+    color: #2d3748;
+}
+
+/* Arama ve Filtreleme */
+.search-box {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-box select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 150px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0aec0;
+}
+
+.filter-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+select {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: white;
+    min-width: 150px;
+}
+
+/* Tablo */
+.table-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background: #f7fafc;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+tr:hover {
+    background: #f7fafc;
+}
+
+/* Butonlar */
+.action-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+    margin-right: 0.5rem;
+}
+
+.toggle-btn {
+    background: #4299e1;
+    color: white;
+}
+
+.delete-btn {
+    background: #f56565;
+    color: white;
+}
+
+.action-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.action-btn:active {
+    transform: translateY(0);
+}
+
+/* Durum badge'leri */
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-badge.active {
+    background: #c6f6d5;
+    color: #2f855a;
+}
+
+.status-badge.inactive {
+    background: #fed7d7;
+    color: #c53030;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+} 

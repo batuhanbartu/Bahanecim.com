@@ -1,0 +1,134 @@
+.bahane-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.bahane-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    border: 3px solid var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.bahane-card:hover {
+    transform: translateY(-5px);
+}
+
+.bahane-content {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.bahane-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px dashed var(--accent-color);
+}
+
+.vote-count {
+    background: var(--accent-color);
+    color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.vote-count::before {
+    content: "👍";
+}
+
+.author {
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+.kategori-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transform: rotate(15deg);
+    font-size: 0.9em;
+}
+
+.no-bahane {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.5em;
+    color: var(--text-color);
+}
+
+.loading {
+    text-align: center;
+    padding: 50px;
+    font-size: 2em;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading::after {
+    content: "🤔";
+    display: inline-block;
+    animation: spin 2s linear infinite;
+}
+
+@media (max-width: 768px) {
+    .populer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.vote-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.vote-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.vote-btn:hover {
+    transform: scale(1.05);
+    background: #ff5252;
+}
+
+.vote-count {
+    font-weight: bold;
+}
+
+.vote-icon {
+    font-size: 1.2em;
+}
+
+.vote-btn.voted {
+    background: var(--secondary-color);
+} 

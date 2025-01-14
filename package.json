@@ -1,0 +1,25 @@
+{
+  "name": "bahanecim",
+  "version": "1.0.0",
+  "description": "Günlük bahane üretici web uygulaması",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "create-admin": "ADMIN_SECRET=gizli_token_123 node scripts/createAdmin.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.7.0",
+    "helmet": "^6.1.5",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+} 

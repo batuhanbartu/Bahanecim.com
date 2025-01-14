@@ -1,0 +1,120 @@
+.profile-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.profile-section,
+.stats-section,
+.bahaneler-section,
+.favorites-section,
+.password-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.profile-section,
+.password-section {
+    grid-column: 1;
+}
+
+.stats-section {
+    grid-column: 2;
+}
+
+.bahaneler-section,
+.favorites-section {
+    grid-column: 1 / -1;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+}
+
+.stat-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.stat-card p {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.bahane-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.bahane-card {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.bahane-content {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.bahane-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.remove-favorite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.remove-favorite:hover {
+    opacity: 1;
+}
+
+.no-data {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-section,
+    .stats-section,
+    .password-section {
+        grid-column: 1;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+} 

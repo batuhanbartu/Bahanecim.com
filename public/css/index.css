@@ -1,0 +1,165 @@
+/* Ana sayfa için CSS kodları buraya gelecek */ 
+
+.uret-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.slogan {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 0px var(--accent-color);
+}
+
+.kategori-filtre {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    border: 3px solid var(--primary-color);
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+select {
+    padding: 0.8rem;
+    font-size: 1.1em;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    background: white;
+    min-width: 200px;
+    cursor: pointer;
+}
+
+.uret-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2em;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.uret-btn:hover {
+    transform: scale(1.05);
+    background: #ff5252;
+}
+
+.uret-btn::after {
+    content: "🎲";
+}
+
+.bahane-kutusu {
+    background: var(--accent-color);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+    position: relative;
+    animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.bahane-kutusu::before {
+    content: "💡";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    font-size: 40px;
+    transform: rotate(-15deg);
+}
+
+.bahane-content {
+    font-size: 1.5em;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.bahane-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px dashed var(--primary-color);
+}
+
+.kategori {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.bahane-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.action-btn:hover {
+    opacity: 0.9;
+}
+
+.copy-btn::after { content: "📋"; }
+.twitter-btn::after { content: "🐦"; }
+.whatsapp-btn::after { content: "📱"; }
+
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+.hidden {
+    display: none;
+}
+
+.vote-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary-color);
+}
+
+.vote-btn.voted {
+    background: var(--secondary-color);
+    cursor: not-allowed;
+}
+
+.vote-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #999;
+}
+
+#oyCount {
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 8px;
+    border-radius: 10px;
+} 

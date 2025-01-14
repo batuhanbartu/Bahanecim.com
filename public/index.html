@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahanecim.com 🤥 - Profesyonel Bahane Üretici</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bahanecim.com 🤥</h1>
+            <nav>
+                <a href="/" class="active">Ana Sayfa</a>
+                <a href="/bahane-ekle.html">Bahane Ekle</a>
+                <a href="/populer.html">Popüler Bahaneler</a>
+                <a href="/profile.html">Profilim</a>
+                <a href="#" id="logoutBtn" class="logout-btn">Çıkış Yap</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="uret-container">
+                <p class="slogan">Profesyonel Bahane Üretme Servisi 🎭</p>
+                
+                <div class="kategori-filtre">
+                    <select id="kategoriFilter">
+                        <option value="">Tüm Kategoriler 🎯</option>
+                        <option value="İş">İş Bahaneleri 💼</option>
+                        <option value="Okul">Okul Bahaneleri 📚</option>
+                        <option value="Sosyal">Sosyal Bahaneler 🎉</option>
+                        <option value="Diğer">Diğer Bahaneler 🎪</option>
+                    </select>
+                    <button id="uretButton" class="uret-btn">Bahane Üret</button>
+                </div>
+
+                <div id="bahaneKutusu" class="bahane-kutusu hidden">
+                    <p id="bahaneMetni" class="bahane-content"></p>
+                    <div class="bahane-meta">
+                        <span id="kategoriSpan" class="kategori"></span>
+                        <div class="bahane-actions">
+                            <button onclick="oyVer()" class="action-btn vote-btn" id="oyVerBtn">
+                                <span id="oyCount">0</span>
+                                <span>👍 Oy Ver</span>
+                            </button>
+                            <button onclick="kopyala()" class="action-btn copy-btn">Kopyala</button>
+                            <button onclick="paylas('twitter')" class="action-btn twitter-btn">Twitter</button>
+                            <button onclick="paylas('whatsapp')" class="action-btn whatsapp-btn">WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Bahanecim.com - Her Duruma Bir Bahane! 🎭</p>
+        </footer>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html> 

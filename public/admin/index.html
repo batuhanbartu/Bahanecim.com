@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Bahanecim.com</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <nav class="admin-nav">
+            <h1>Admin Panel</h1>
+            <div class="nav-links">
+                <a href="#users" class="nav-link active">Kullanıcı Yönetimi</a>
+                <a href="#bahaneler" class="nav-link">Bahane Yönetimi</a>
+            </div>
+            <div class="nav-footer">
+                <a href="/" class="nav-link">🏠 Siteye Git</a>
+                <a href="#" id="logoutBtn" class="nav-link">🚪 Çıkış Yap</a>
+            </div>
+        </nav>
+
+        <main class="admin-main">
+            <section id="users" class="section active">
+                <h2>Kullanıcı Yönetimi</h2>
+                <div class="search-box">
+                    <input type="text" id="userSearchInput" placeholder="Kullanıcı adı veya e-posta ara...">
+                </div>
+                <table id="usersTable">
+                    <thead>
+                        <tr>
+                            <th>Kullanıcı Adı</th>
+                            <th>E-posta</th>
+                            <th>Durum</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+
+            <section id="bahaneler" class="section">
+                <h2>Bahane Yönetimi</h2>
+                <div class="search-box">
+                    <input type="text" id="bahaneSearchInput" placeholder="Bahane içeriği ara...">
+                    <select id="bahaneKategoriFilter">
+                        <option value="">Tüm Kategoriler</option>
+                        <option value="İş">İş</option>
+                        <option value="Okul">Okul</option>
+                        <option value="Sosyal">Sosyal</option>
+                        <option value="Diğer">Diğer</option>
+                    </select>
+                </div>
+                <table id="bahanelerTable">
+                    <thead>
+                        <tr>
+                            <th>İçerik</th>
+                            <th>Kategori</th>
+                            <th>Yazar</th>
+                            <th>Oy</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html> 

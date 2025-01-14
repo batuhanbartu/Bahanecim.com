@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahane Ekle - Bahanecim.com</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bahane-ekle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bahanecim.com</h1>
+            <nav>
+                <a href="/">Ana Sayfa</a>
+                <a href="/bahane-ekle.html" class="active">Bahane Ekle</a>
+                <a href="/populer.html">Popüler Bahaneler</a>
+                <a href="/profile.html">Profilim</a>
+                <a href="#" id="logoutBtn" class="logout-btn">Çıkış Yap</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="form-container">
+                <h2 class="form-title">Yeni Bahane Ekle</h2>
+                <form id="bahaneForm">
+                    <div class="form-group">
+                        <label for="content">Bahaneniz</label>
+                        <textarea id="content" name="content" required 
+                            placeholder="Bahanenizi buraya yazın..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Kategori</label>
+                        <select id="category" name="category" required>
+                            <option value="">Kategori Seçin</option>
+                            <option value="İş">İş</option>
+                            <option value="Okul">Okul</option>
+                            <option value="Sosyal">Sosyal</option>
+                            <option value="Diğer">Diğer</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Bahaneyi Kaydet</button>
+                </form>
+
+                <div class="guidelines">
+                    <h3>Bahane Yazım Kuralları</h3>
+                    <ul>
+                        <li>Özgün ve yaratıcı olun</li>
+                        <li>Detayları unutmayın</li>
+                        <li>Mizah kullanmaktan çekinmeyin</li>
+                        <li>Güncel konulardan ilham alın</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Bahanecim.com - Her Duruma Bir Bahane</p>
+        </footer>
+    </div>
+    <script src="js/bahane-ekle.js"></script>
+</body>
+</html> 
