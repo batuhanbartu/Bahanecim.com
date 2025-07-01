@@ -1,113 +1,108 @@
-# 🎭 Bahanecim.com - Profesyonel Bahane Üretici
+<div align="center">
 
-## 📖 Proje Hakkında
-Bahanecim.com, kullanıcıların günlük hayatta karşılaştıkları durumlar için yaratıcı ve eğlenceli bahaneler üretebilecekleri interaktif bir web platformudur. Kullanıcılar sisteme giriş yaparak kendi bahanelerini ekleyebilir, var olan bahaneleri oylayabilir ve paylaşabilirler.
+# 🧠 BAHANECIM.COM  
+_**Ignite Creativity, Share Laughter, Vote for the Best**_
 
-## 🚀 Özellikler
-- 🎲 Rastgele bahane üretme
-- 📂 Kategori bazlı bahane filtreleme
-- 👥 Kullanıcı hesap sistemi
-- ⭐ Bahane oylama sistemi
-- 📤 Sosyal medya paylaşım entegrasyonu
-- 👑 Admin paneli
-- 🔒 Gelişmiş güvenlik önlemleri
+[![Last Commit](https://img.shields.io/github/last-commit/batuhanbartu/Bahanecim.com?style=flat&logo=git&logoColor=white&color=0080ff)](https://github.com/batuhanbartu/Bahanecim.com)
+[![Top Language](https://img.shields.io/github/languages/top/batuhanbartu/Bahanecim.com?style=flat&color=0080ff)](https://github.com/batuhanbartu/Bahanecim.com)
+[![Language Count](https://img.shields.io/github/languages/count/batuhanbartu/Bahanecim.com?style=flat&color=0080ff)](https://github.com/batuhanbartu/Bahanecim.com)
 
-## 🛠️ Kullanılan Teknolojiler
+<br/>
 
-### Backend
-- **Node.js** - Sunucu tarafı JavaScript runtime
-- **Express.js** - Web uygulama framework'ü
-- **MongoDB** - NoSQL veritabanı
-- **Mongoose** - MongoDB ODM (Object Data Modeling)
-- **JWT** - JSON Web Token kimlik doğrulama
-- **Bcrypt** - Şifre hashleme
+Built with:
 
-### Güvenlik
-- **Helmet** - HTTP header güvenliği
-- **XSS-Clean** - Cross-site scripting koruması
-- **Express-Rate-Limit** - API rate limiting
-- **CORS** - Cross-Origin Resource Sharing yapılandırması
+![Express](https://img.shields.io/badge/Express-000000.svg?style=flat&logo=Express&logoColor=white)
+![JSON](https://img.shields.io/badge/JSON-000000.svg?style=flat&logo=JSON&logoColor=white)
+![Markdown](https://img.shields.io/badge/Markdown-000000.svg?style=flat&logo=Markdown&logoColor=white)
+![npm](https://img.shields.io/badge/npm-CB3837.svg?style=flat&logo=npm&logoColor=white)
+![Mongoose](https://img.shields.io/badge/Mongoose-F04D35.svg?style=flat&logo=Mongoose&logoColor=white)
+![.ENV](https://img.shields.io/badge/.ENV-ECD53F.svg?style=flat&logo=dotenv&logoColor=black)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=flat&logo=JavaScript&logoColor=black)
+![Nodemon](https://img.shields.io/badge/Nodemon-76D04B.svg?style=flat&logo=Nodemon&logoColor=white)
 
-### Frontend
-- **HTML5** - Sayfa yapısı
-- **CSS3** - Stil ve tasarım
-- **JavaScript** - İstemci tarafı programlama
+</div>
 
+---
 
-## 🚀 Kurulum
+## 📌 Table of Contents
 
-### Gereksinimler
-- Node.js (v14 veya üzeri)
-- MongoDB
-- npm veya yarn
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Testing](#testing)
 
-### Adımlar
+---
 
-1. Bağımlılıkları yükleyin:
+## 📖 Overview
 
+**Bahanecim.com** is a dynamic web platform where users can create, share, and vote for the most creative excuses in a gamified and interactive environment.
+
+### 🔍 Why Bahanecim.com?
+
+The platform prioritizes creativity, engagement, and secure user interactions. Here are the key features:
+
+- 🛡️ **Secure Auth System**  
+  JWT-based login with environment secrets and role-based access control.
+
+- 🎯 **Community-Driven Content**  
+  Add, delete, vote on excuses — all within a social and moderated ecosystem.
+
+- 🔧 **Admin Features**  
+  Dedicated admin panel for managing users and content effectively.
+
+- 🚀 **Scalable Backend**  
+  Modular structure with error handling, middlewares, and robust database integration.
+
+- 👨‍💻 **Dev-Friendly Setup**  
+  Clear folder structure, seed scripts, and RESTful API routes.
+
+---
+
+## 🚀 Getting Started
+
+### ✅ Prerequisites
+
+- **Node.js** and **npm**
+- Git installed on your system
+
+### 📥 Installation
+
+Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/batuhanbartu/Bahanecim.com
+cd Bahanecim.com
 npm install
+```
 
+### ▶️ Usage
 
-2. `.env` dosyasını oluşturun:
+Start the project:
 
-env
-PORT=3000
-MONGODB_URI=mongodb://127.0.0.1:27017/bahane-uretici
-JWT_SECRET=your_jwt_secret
-JWT_EXPIRES_IN=90d
-NODE_ENV=development
-
-
-3. Uygulamayı çalıştırın:
-
-##Geliştirme modu
-npm run dev
-
-##Production modu
+```bash
 npm start
+```
 
+If you use `nodemon` for development:
 
-## 🔒 API Endpoints
+```bash
+npm run dev
+```
 
-### Auth Routes
-- `POST /api/auth/register` - Yeni kullanıcı kaydı
-- `POST /api/auth/login` - Kullanıcı girişi
+### 🧪 Testing
 
-### Bahane Routes
-- `GET /api/bahane/random` - Rastgele bahane
-- `GET /api/bahane/popular` - Popüler bahaneler
-- `POST /api/bahane/add` - Yeni bahane ekle
-- `POST /api/bahane/:id/vote` - Bahaneye oy ver
+> ⚠️ Replace `{test_framework}` with the one you used (e.g. Jest, Mocha)
 
-### Admin Routes
-- `GET /api/admin/users` - Kullanıcı listesi
-- `GET /api/admin/bahaneler` - Bahane yönetimi
-- `POST /api/admin/users/:id/toggle` - Kullanıcı durumu değiştir
+```bash
+npm test
+```
 
-## 👥 Kullanıcı Rolleri
+---
 
-### Normal Kullanıcı
-- Bahane görüntüleme
-- Bahane ekleme
-- Oy verme
-- Profil yönetimi
+<div align="center">
 
-### Admin
-- Kullanıcı yönetimi
-- Bahane moderasyonu
-- Sistem istatistikleri
-- Kategori yönetimi
+⬆️ [Back to Top](#bahanecimcom)
 
-## 🔐 Güvenlik Özellikleri
-- JWT tabanlı kimlik doğrulama
-- Şifre hashleme (bcrypt)
-- API rate limiting
-- XSS koruması
-- Güvenli HTTP headers
-- Input validation
-
-## 📝 Geliştirici Notları
-- Tüm API istekleri için JWT token gereklidir
-- Rate limiting: 15 dakikada maksimum 100 istek
-- Şifre minimum 6 karakter olmalıdır
-- Admin hesabı oluşturmak için özel token gerekir
+</div>
